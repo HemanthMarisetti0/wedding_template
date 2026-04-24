@@ -54,6 +54,7 @@ function TypewriterName({ text }) {
 function RotatingText({ en, te }) {
   const [showTelugu, setShowTelugu] = useState(false);
 
+
   useEffect(() => {
     const interval = setInterval(() => {
       setShowTelugu((prev) => !prev);
@@ -264,7 +265,7 @@ export default function WeddingWebsite() {
                 transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
               />
 
-             <TypewriterName text={invitedName} />
+              <TypewriterName text={invitedName} />
             </motion.div>
 
             {/* Telugu subline */}
@@ -313,9 +314,12 @@ export default function WeddingWebsite() {
               }}
             />
             {/* Quote */}
-            <p style={styles.quote}>
-              “Two souls, one sacred journey, united in love and destiny.”
-            </p>
+            <div style={styles.quote}>
+              <RotatingText
+                en="Two souls, one sacred journey, united in love and destiny."
+                te="రెండు మనసులు ఒక పవిత్ర ప్రయాణంలో ప్రేమతో మరియు విధితో ఏకమయ్యాయి"
+              />
+            </div>
 
             {/* LOVE BACKGROUND */}
             <div style={styles.loveBg}>♡</div>
@@ -380,7 +384,7 @@ export default function WeddingWebsite() {
           {/* Countdown */}
           {/* Countdown */}
           <div style={styles.countdownWrap}>
-            {["days", "hours", "minutes", "seconds"].map((k) => (
+            {["days", "hours", "minutes", "secs"].map((k) => (
               <motion.div
                 key={k}
                 style={styles.countdownBox}
@@ -428,16 +432,24 @@ export default function WeddingWebsite() {
                   marginBottom: "14px",
                 }}
               >
-                WEDDING CEREMONY
+                <RotatingText
+                  en="WEDDING CEREMONY"
+                  te="వివాహ వేడుక"
+                />
               </h3>
 
               <p style={{ fontSize: "15px", fontWeight: "600", color: "#5b4636" }}>
-                May 10, 2026
+                <RotatingText
+                  en="May 10, 2026"
+                  te="మే 10, 2026"
+                />
               </p>
 
-              {/* ⏰ TIME */}
               <p style={{ fontSize: "14px", color: "#7a5c2e", marginBottom: "14px" }}>
-                10:19 PM (Muhurtham)
+                <RotatingText
+                  en="10:19 PM (Muhurtham)"
+                  te="రాత్రి 10:19 గంటలకు (ముహూర్తం)"
+                />
               </p>
 
               <div
@@ -450,15 +462,24 @@ export default function WeddingWebsite() {
                 }}
               >
                 <h4 style={{ fontSize: "15px", fontWeight: "600", color: "#6b4f1d" }}>
-                  Sri Sundara Sai Nigamagamu
+                  <RotatingText
+                    en="Sri Sundara Sai Nigamagamu"
+                    te="శ్రీ సుందర సాయి నిగమాగము"
+                  />
                 </h4>
 
                 <p style={{ fontSize: "13px", color: "#8b6f3d" }}>
-                  Kalyana Mandapam
+                  <RotatingText
+                    en="Kalyana Mandapam"
+                    te="కళ్యాణ మండపం"
+                  />
                 </p>
 
                 <p style={{ fontSize: "12px", color: "#9a7b4f", marginBottom: "12px" }}>
-                  Near RTC Complex, Kovvur
+                  <RotatingText
+                    en="Near RTC Complex, Kovvur"
+                    te="ఆర్టీసీ కాంప్లెక్స్ సమీపం, కొవ్వూరు"
+                  />
                 </p>
 
                 {/* 📍 GOOGLE MAP */}
@@ -505,16 +526,24 @@ export default function WeddingWebsite() {
                   marginBottom: "14px",
                 }}
               >
-                RECEPTION & LUNCH
+                <RotatingText
+                  en="RECEPTION & LUNCH"
+                  te="రిసెప్షన్ & విందు"
+                />
               </h3>
 
               <p style={{ fontSize: "15px", fontWeight: "600", color: "#5b4636" }}>
-                May 12, 2026
+                <RotatingText
+                  en="May 12, 2026"
+                  te="మే 12, 2026"
+                />
               </p>
 
-              {/* ✅ FIXED TIME */}
               <p style={{ fontSize: "14px", color: "#7a5c2e", marginBottom: "14px" }}>
-                12:00 PM onwards
+                <RotatingText
+                  en="12:00 PM onwards"
+                  te="మధ్యాహ్నం 12:00 గంటల నుండి"
+                />
               </p>
 
               <div
@@ -527,15 +556,24 @@ export default function WeddingWebsite() {
                 }}
               >
                 <h4 style={{ fontSize: "15px", fontWeight: "600", color: "#7f1d1d" }}>
-                  At Our Home
+                  <RotatingText
+                    en="At Our Home"
+                    te="మా గృహంలో"
+                  />
                 </h4>
 
                 <p style={{ fontSize: "13px", color: "#9f1239" }}>
-                  Kakula Illindalaparru
+                  <RotatingText
+                    en="Kakula Illindalaparru"
+                    te="కాకుల ఇల్లిందలపర్రు"
+                  />
                 </p>
 
                 <p style={{ fontSize: "12px", color: "#9a7b4f", marginBottom: "12px" }}>
-                  Reception & Lunch Gathering
+                  <RotatingText
+                    en="Reception & Lunch Gathering"
+                    te="విందు & స్వాగత కార్యక్రమం"
+                  />
                 </p>
 
                 {/* 📍 GOOGLE MAP BUTTON */}
@@ -585,7 +623,10 @@ export default function WeddingWebsite() {
                 marginBottom: "30px",
               }}
             >
-              With heartfelt invitation from            </h3>
+              <RotatingText
+                en="With heartfelt invitation from"
+                te="మనస్ఫూర్తిగా ఆహ్వానించువారు"
+              />          </h3>
 
             {/* Divider */}
             <div
@@ -639,11 +680,15 @@ export default function WeddingWebsite() {
                   style={{
                     marginTop: "10px",
                     fontSize: "13px",
-                    color: "#9a7b4f",
+                    color: "#5a3e17",
                     letterSpacing: "1px",
                   }}
                 >
-                  Groom’s Parents
+
+                  <RotatingText
+                    en="& Groom’s Parents"
+                    te="వరుడి తల్లిదండ్రులు"
+                  />
                 </p>
               </div>
 
@@ -680,11 +725,15 @@ export default function WeddingWebsite() {
                   style={{
                     marginTop: "10px",
                     fontSize: "13px",
-                    color: "#9a7b4f",
+                    color: "#5a3e17",
                     letterSpacing: "1px",
                   }}
                 >
-                  Bride’s Parents
+
+                  <RotatingText
+                    en="& Bride’s Parents"
+                    te="&వధువు తల్లిదండ్రులు"
+                  />
                 </p>
               </div>
             </div>
@@ -699,7 +748,10 @@ export default function WeddingWebsite() {
                   letterSpacing: "1px",
                 }}
               >
-                Along with
+                <RotatingText
+                  en="Along with"
+                  te="వారితో పాటు"
+                />
               </p>
 
               <p
