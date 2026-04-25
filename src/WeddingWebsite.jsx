@@ -531,8 +531,8 @@ export default function WeddingWebsite() {
 
               <p style={{ fontSize: "15px", fontWeight: "600", color: "#5b4636" }}>
                 <RotatingText
-                  en="May 12, 2026"
-                  te="మే 12, 2026"
+                  en="May 11, 2026"
+                  te="మే 11, 2026"
                 />
               </p>
 
